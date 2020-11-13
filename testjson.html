@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="../js/JQueryV3.5.1.js"></script>
+    <script>
+        $(function(){
+            var myobj=[
+                {
+            "name":"Mr. x",
+            "age" :20,
+            "Email":"slayerd70@gmail.com"},
+            {
+            "name":"Mr. y",
+            "age" :15,
+            "Email":"slayerd70@gmail.com"},
+            {
+            "name":"Mr. z",
+            "age" :"16",
+            "Email":"slayerd70@gmail.com"}
+            
+            
+            
+        ]
+        var x="";
+        
+        ;for(i in myobj){
+            x+="<br><br> ชื่อ"+myobj[i].name;
+            x+="<br><br> อายุ"+myobj[i].age;
+            x+="<br><br> email"+myobj[i].Email
+        }
+            $("#myMessage").html(x);
+        })
+    </script>
+</head>
+<body>
+    <h1>หัวข้อเรื่อง การดึงข้อมูลจาก json </h1>
+    <div id="myMessage"></div>
+    
+</body>
+</html>

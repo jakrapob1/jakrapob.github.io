@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/test.css">
+    <script>
+            function man() {
+                num=document.getElementById("num").value
+                message=""
+                for(var i=1;i<=12;i++){
+                    message+=` ${num} * ${i} = ${num*i} <br>`
+                }
+                
+                document.getElementById("answer").innerHTML=message
+            }
+    </script>
+</head>
+<body>
+    <div class="menubar">
+        <div class="container">
+            <div class="logo">
+                <h1>MyWebPage</h1>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com/html/default.asp">w3schools</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100009382910814">facebook</a>
+                </li>
+                <li>
+                    <a href="Calculate.html">Calculate</a>
+                </li>
+                <li>
+                    <a href="testform4.html">Multipli</a>
+                </li>
+                <li>
+                    <a href="../JSON/TestDatatable.html">JSON Data</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=VMREJzIZbCg&t=249s">HTML+CSS</a>
+                </li>
+                <li>
+                    <a href="../html/Drug.html">Project</a>
+                </li>
+                <li>
+                    <a href="../html/TT1.html">BMI</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <center><h1>เเม่สูตรคูณ</h1></center>
+    ระบุตัวเลข : <input type="number" name="num" id="num">
+    <button onclick="man()">คลิ๊ก</button>
+
+    <div id="answer"></div>
+</body>
+</html>

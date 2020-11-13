@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+   
+    <title>Document</title>
+    
+
+    
+    <script>
+    function calculateBMI(){
+        var weight = document.bmiCalc.weight.value
+        var height = document.bmiCalc.height.value
+    
+        if(weight > 0 && height > 0){
+            var finalBmi = (weight/(height*height))*703;
+            document.bmiCalc.bmi.value = new Number(finalBmi).toFixed(2)
+    
+            if(finalBmi < 18.5){
+                document.bmiCalc.meaning.value = "Underweight BMI"
+            }
+    
+            if(finalBmi > 18.5 && finalBmi < 25){
+                document.bmiCalc.meaning.value = "Normal BMI"
+            }
+    
+            if(finalBmi > 25 && finalBmi < 30){
+                document.bmiCalc.meaning.value = "Overweight BMI"
+            }
+    
+            if(finalBmi > 30 && finalBmi < 35){
+                document.bmiCalc.meaning.value = "Obese BMI"
+            }
+    
+            if(finalBmi > 35){
+                document.bmiCalc.meaning.value = "Extremely Obese BMI"
+            }
+    
+        }else{
+            alert ("Please fill in all fields.")
+        }
+    }
+</script>
+</head>
+<body>
+    <div class="menubar">
+        <div class="container">
+            <div class="logo">
+                <h1>MyWebPage</h1>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com/html/default.asp">w3schools</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100009382910814">facebook</a>
+                </li>
+                <li>
+                    <a href="Calculate.html">Calculate</a>
+                </li>
+                <li>
+                    <a href="testform4.html">Multipli</a>
+                </li>
+                <li>
+                    <a href="../JSON/TestDatatable.html">JSON Data</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=VMREJzIZbCg&t=249s">HTML+CSS</a>
+                </li>
+                <li>
+                    <a href="../html/Drug.html">Project</a>
+                </li>
+                <li>
+                    <a href="../html/jqslide.html">Organizer</a>
+                </li>
+                <li>
+                    <a href="../html/jqslide.html">BMI</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <form id="form" name="bmiCalc">
+        <div class="header">BMI Calculator</div>
+        <div class="sub">Body Mass Indicator for Adults</div>
+        <!--Input for body weight-->
+            <div class="input">
+                <input for="weight" class="text" placeholder="Your Weight (lbs)*" type="text" name="weight">
+            </div>
+        <!--Input for height-->
+            <div class="input">
+                <input for="height" class="text" placeholder="Your Height (Inches)*" type="text" name="height">
+            </div>
+        <!--BMI Submit Button-->
+            <div>
+                <input class="button" type="button" value="Calculate BMI" onClick="calculateBMI()">
+            </div>
+        <!--BMI Results-->
+            <div class="input">
+                <input for="bmi_result" class="text" placeholder="Your BMI" type="text" name="bmi">
+            </div>
+        <!--BMI Message Results-->
+            <div class="input">
+                <input for="bmi_message" placeholder="This Means" class="text" type="text" name="meaning">
+            </div>
+        <!--BMI Reset-->
+            <div>
+                <input class="button" type="reset" value="Reset">
+            </div>
+        </form>
+    
+</body>
+</html>

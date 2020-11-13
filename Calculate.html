@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/test.css">
+    <script>
+    
+            function getdataf(form){
+                num1=form.num1.value
+                num2=form.num2.value
+                num1=Number.parseInt(num1)
+                num2=Number.parseInt(num2)
+                sum=num1*num2; 
+                message=`เเสดงข้อมูลดังนี้ : <br> สูตรการหาพื้นที่สี่เหลี่ยมผืนผ้า = กว้าง x ยาว <br> Input your Width : ${num1} <br>`
+                message+=`Input your long : ${num2} <br> ผลรวมคือ : ${sum} `
+                document.getElementById("anwser").innerHTML=message
+
+            }
+    </script>
+</head>
+<body>
+    <div class="menubar">
+        <div class="container">
+            <div class="logo">
+                <h1>MyWebPage</h1>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                
+                <li>
+                    <a href="Calculate.html">Calculate</a>
+                </li>
+                <li>
+                    <a href="testform4.html">Multipli</a>
+                </li>
+                <li>
+                    <a href="../JSON/TestDatatable.html">JSON Data</a>
+                </li>
+                <li>
+                    <a href="../html/Drug.html">Project</a>
+                </li>
+                <li>
+                    <a href="../html/jqslide.html">Organizer</a>
+                </li>
+                <li>
+                    <a href="../html/TT1.html">BMI</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <center><h1>ทดสอบรับค่าจาก html form โดยใช้ js </h1>></center>
+    <form name="myform" action="Calculate.html" method="get">
+    </h1>สูตรการหาพื้นที่สี่เหลี่ยมผืนผ้า = กว้าง x ยาว <h1>
+        Input your Width : <input type="number" name="num1"> <br>
+        Input your long  : <input type="number" name="num2" id="num2"> <br>
+    <input type="button" value="คำนวณ" onclick="getdataf(this.form)">
+</form>
+    <div id="anwser">
+
+    </div>
+</body>
+</html>

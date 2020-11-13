@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="../js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    
+    <script>
+        $(function(){
+            $("#a ").on("mouseenter",function(){
+                $("#a1").show();
+                $("#b2").hide();
+                $("#c3").hide();
+            
+            });
+            $("#b ").on("mouseenter",function(){
+                $("#a1").hide();
+                $("#b2").show();
+                $("#c3").hide();
+            
+            
+            })
+            $("#c ").on("mouseenter",function(){
+                $("#a1").hide();
+                $("#b2").hide();
+                $("#c3").show();
+            
+            
+            })
+        })
+        
+        
+    </script>
+    <script>
+        $(function(){
+            $("p").hide()
+                $("h1").click(function(){
+                        $("p").show()
+                    })
+            })
+    </script>
+    <style>
+        #divA,#divB,#divC{
+            display: none;
+            width: 100%;
+            height: 300px;
+            border-style: dotted;
+
+        }
+        div{
+           
+            width: 100%;
+            height: 300px;
+            border-style: dotted;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <p> What your name </p>
+    <button id="a" >ปุ่ม A </button>
+    <button id="b">ปุ่ม B </button>
+    <button id="c">ปุ่ม C </button>
+    <div id="divA"> AAA  </div>
+    <div id="divB"> BBB  </div>
+    <div id="divC"> CCC  </div>
+    <img src="../image/download.jfif" id="a1" width="100px">
+    <img src="../image/download (1).jfif" id="b2" width="100px">
+    <img src="../image/download (2).jfif" id="c3" width="100px">
+        
+</body>
+</html>

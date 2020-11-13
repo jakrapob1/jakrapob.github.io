@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/test.css">
+    <title>Document</title>
+  
+    <script>
+        function getData(form){
+            var fname=form.fname.value;
+    var lname=form.lname.value;
+    var stdid=form.stdid.value;
+    var birthday=form.birthday.value; 
+    var comment=form.comment.value;
+    
+            var ans=""
+            for(let i=0;i<form.activity.length;i++){
+                if(form.activity[i].checked){
+                    ans+=form.activity[i].value+ "<br>";
+                }
+                
+               
+    var answer="<b> แสดงข้อมูลตรงนี้ : </b><br> ชื่อ : " +fname;
+        answer+="<br> นามสกุล : " +lname;
+        answer+="<br> รหัสนักศึกษา : " +stdid;
+        answer+="<br> วันเกิด : " +birthday;
+        answer+="<br> นิยามเกี่ยวกับตัวเอง :"+comment;
+        answer+="<br> กิจกรรมที่ชอบ :  <br>" +ans;
+            
+            }
+            
+          
+            document.getElementById("ans").innerHTML=answer
+
+        }
+    </script>
+</head>
+<body>
+    <div class="menubar">
+        <div class="container">
+            <div class="logo">
+                <h1>MyWebPage</h1>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com/html/default.asp">w3schools</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100009382910814">facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=VMREJzIZbCg&t=249s">HTML+CSS</a>
+                </li>
+                <li>
+                    <a href="../html/jqslide.html">Organizer(slide)</a>
+                </li>
+                <li>
+                    <a href="../html/homework.html">Homework</a>
+                </li>
+        
+            </ul>
+        </div>
+    </div>
+        
+    <section class="contact">
+        <div class="container">
+            <div class="contact_area">
+
+    
+    
+    
+    <fieldset>
+        <legend>Please fill in the information</legend>
+        <form action="index.html" method="get" name="myform">
+
+            <legend><b>FristName</b></legend>  
+         <input type="text"   id="fname">
+
+         <legend><b>LastName</b></legend> 
+         <input type="text" class="form-control" name="" id="lname">
+
+         <legend><b>StudentID</b></legend> 
+         <input type="text" class="form-control" name="" id="stdid">
+
+         <legend><b>วันเกิด</b></legend>   
+         <input type="date" name="birthday" id="birthday"><br>
+           
+        <b>Activity :</b><div> <input type="checkbox"  name="activity" value="ว่ายน้ำ">ว่ายน้ำ </div>
+        <div> <input type="checkbox"  name="activity" value="นอน">นอน </div>
+        <div> <input type="checkbox"  name="activity" value="วิ่ง">วิ่ง </div>
+        <b>About myself :</b><br> <textarea name="comment" row="10" cols="50"></textarea> <br>
+
+        <input type="button" onclick="getData(this.form)" value="Send">
+        
+          
+    </form>
+    
+</fieldset>
+    <div id="ans"></div>
+    
+    <footer>
+        <p>Computer science & 2020 | Jakrapob Thammatho</p>
+    </footer>
+</body>
+</html>

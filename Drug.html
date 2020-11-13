@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/test.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="menubar">
+        <div class="container">
+            <div class="logo">
+                <h1>MyWebPage</h1>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="Calculate.html">Calculate</a>
+                </li>
+                <li>
+                    <a href="TT1.html">BMI</a>
+                </li>
+                <li>
+                    <a href="Calculate.html">Calculate</a>
+                </li>
+                <li>
+                    <a href="testform4.html">Multipli</a>
+                </li>
+                <li>
+                    <a href="../JSON/TestDatatable.html">JSON Data</a>
+                </li>
+                <li>
+                    <a href="../html/home.html">hide-show</a>
+                </li>
+                <li>
+                    <a href="../html/Drug.html">Project(คลังยา)</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="contact">
+        <div class="container">
+            <div class="contact_area">
+    <fieldset>
+        <legend>Please fill in the information</legend>
+
+   PillID :
+    <input type="text" id="pillid"><br>
+   Pillname :
+    <input type="text" id="Pillname"><br>
+   Amount : 
+    <input type="text" id="Amout"><br>
+   Exp :
+    <input type="text" id="Exp">
+</fieldset>
+  <button id="submit">submit</button>
+</body>
+</html>
+<script>
+     var db = openDatabase('Drug', '1.0','Drug',2 * 1024 *1024);
+$(function(){
+    db.transaction(function(transaction){
+            var sql=`CREATE TABLE IF NOT EXISTS "Pill" (
+	"PillID"	INTEGER,
+	"Pillname"	TEXT,
+	"Amout"	TEXT,
+	"Exp"	TEXT,
+	PRIMARY KEY("PillID" AUTOINCREMENT)
+);`;
+            transaction.executeSql(sql,undefined,function(){
+                alert("Table is created successfully");
+            },function(){
+                alert("Table is already being created");
+            }
+            
+            )   
+})})
+$('#submit').click(function(){
+    var PillID = $("#PillID").val();
+    var Pillname = $("#Pillname").val();
+    var Amout = $("#Amout").val();
+    var Exp = $("#Exp").val();
+    var query= `INSERT INTO Pill(Pillname,Amout,Exp) values ("${Pillname}","${Amout}","${Exp}")`
+    db.transaction(function(transaction){
+        transaction.executeSql(query,undefined,function(){
+            console.log(Pillname)
+            console.log("OK !!")
+        },function(transaction,err){
+            console.log(err.message)
+})
+    })
+
+})
+
+</script>
+<footer>
+    <p>Computer science & 2020 | Jakrapob Thammatho</p>
+</footer>

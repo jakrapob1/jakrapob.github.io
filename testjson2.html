@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="../js/JQueryV3.5.1.js"></script>
+    <script>
+        $(function(){
+            var myobj={
+            "name":"jakrapob",
+            "age":20,
+            "email":"slayerd70@gmail.com",
+            "telNum":{
+                "tel1":"5555555",
+                "tel2":"515151515",
+            }
+            }
+            myobj.name="ohm"
+            myobj.tel="06215215151"
+            delete myobj.email;
+            var x="";
+            var x=myobj.telNum.tel1;
+            $("#myMessage").html(x);
+        })
+    </script>
+</head>
+<body>
+    <h1>หัวข้อเรื่อง การดึงข้อมูลจาก json </h1>
+    <div id="myMessage"></div>
+    
+</body>
+</html>

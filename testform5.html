@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getData(form){
+            message=""
+            for(let i=0;i<form.activity.length;i++){
+                if(form.activity[i].checked){
+                    message+=form.activity[i].value+ "<br>";
+                }
+                
+               
+            }
+          
+            document.getElementById("ans").innerHTML=message
+
+        }
+    </script>
+</head>
+<body>
+        <center>ทดสอบข้อมูล html checkbox </center>
+        <form action="testform5.html" method="get" name="myform">
+        กรุณาเลือกกิจกรรมที่ชอบ : <input type="checkbox"  name="activity" value="-ว่ายน้ำ"> ว่ายน้ำ
+                              <input type="checkbox"  name="activity" value="-วิ่ง"> วิ่ง
+                              <input type="checkbox"  name="activity" value="-ดูยูทูป"> ดูยูทูป
+       
+        <input type="button" onclick="getData(this.form)" value="ส่งข้อมูล">
+
+
+    </form>
+    <div id="ans"></div>
+</body>
+</html>

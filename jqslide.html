@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/test.css">
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+    background: #333;
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
+</head>
+<body>
+    <div class="menubar">
+        <div class="container">
+            <div class="logo">
+                <h1>MyWebPage</h1>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="Calculate.html">Calculate</a>
+                </li>
+                <li>
+                    <a href="TT1.html">BMI</a>
+                </li>
+                <li>
+                    <a href="Calculate.html">Calculate</a>
+                </li>
+                <li>
+                    <a href="testform4.html">Multipli</a>
+                </li>
+                <li>
+                    <a href="../JSON/TestDatatable.html">JSON Data</a>
+                </li>
+                <li>
+                    <a href="../html/home.html">hide-show</a>
+                </li>
+                <li>
+                    <a href="../html/Drug.html">Project</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+ 
+<div id="flip">About myself</div>
+
+<div id="panel"><img src="../image/ja.jpg" width="300px" ><br> ชื่อ : นายจักรภพ ธรรมโท <br> รหัสนักศึกษา : 61424201006 <br> สาขา : วิทยาการคอมพิวเตอร์ <br> คณะ : เทคโนโลยีสารสนเทศ <br> มหาวิทยาลัยราชภัฏร้อยเอ็ด 
+</div>
+
+</body>
+</html>
