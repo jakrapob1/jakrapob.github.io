@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/test.css">
-    <script>
-            function man() {
-                num=document.getElementById("num").value
-                message=""
-                for(var i=1;i<=12;i++){
-                    message+=` ${num} * ${i} = ${num*i} <br>`
-                }
-                
-                document.getElementById("answer").innerHTML=message
-            }
-    </script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+    background: #333;
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
 </head>
 <body>
     <div class="menubar">
@@ -52,10 +60,11 @@
             </ul>
         </div>
     </div>
-    <center><h1>เเม่สูตรคูณ</h1></center>
-    ระบุตัวเลข : <input type="number" name="num" id="num">
-    <button onclick="man()">คลิ๊ก</button>
+ 
+<div id="flip">About myself</div>
 
-    <div id="answer"></div>
+<div id="panel"><img src="image/ja.jpg" width="300px" ><br> ชื่อ : นายจักรภพ ธรรมโท <br> รหัสนักศึกษา : 61424201006 <br> สาขา : วิทยาการคอมพิวเตอร์ <br> คณะ : เทคโนโลยีสารสนเทศ <br> มหาวิทยาลัยราชภัฏร้อยเอ็ด 
+</div>
+
 </body>
 </html>
