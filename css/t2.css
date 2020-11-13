@@ -1,0 +1,43 @@
+html {
+    font-family: sans-serif;
+  }
+body{
+ background-image:url(../image/abstract-technology-particle-background_52683-25766.jpg);
+ color: aliceblue;
+}  
+  form {
+    width: 600px;
+    margin: 0 auto;
+    color: aliceblue;
+  }
+  
+  div {
+    margin-bottom: 10px;
+  }
+  
+  fieldset {
+    
+    border: 5px solid rgb(255, 255, 255);
+  }
+  
+  legend {
+    padding: 10px;
+    background: black;
+    color:rgb(255, 255, 255);
+  }
+  a:link, a:visited {
+    background-color: #999e90;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    
+  }
+  a:hover, a:active {
+    background-color: black;
+  }
+  a{
+    margin-left: 100px ;
+  }
+  

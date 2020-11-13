@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/Jquery-min.js" ></script>
+    <link rel="stylesheet" type="text/css" href="../css/mydatatable.css">
+    <script type="text/javascript" src="../js/jqueryDataTable.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui-1.12.1"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/test.css">
+    <script>
+        $(function(){
+        $('#data-table').DataTable(
+            {
+            "ajax": "example3.json",
+        } );
+     } );
+    </script>
+</head>
+<body>
+    <div class="menubar">
+        <div class="container">
+            <div class="logo">
+                <h1>MyWebPage</h1>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="../html/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="Calculate.html">Calculate</a>
+                </li>
+                <li>
+                    <a href="TT1.html">BMI</a>
+                </li>
+                <li>
+                    <a href="Calculate.html">Calculate</a>
+                </li>
+                <li>
+                    <a href="testform4.html">Multipli</a>
+                </li>
+                <li>
+                    <a href="../JSON/TestDatatable.html">JSON Data</a>
+                </li>
+                <li>
+                    <a href="../html/home.html">hide-show</a>
+                </li>
+                <li>
+                    <a href="../html/Drug.html">Project</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <center><h1>Show JSON Data in Jquery DataTables</h1></center>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>ชื่อ</th>
+                <th>นามสกุล</th>
+                <th>รหัสนักศึกษา</th>
+                <th>คณะ</th>
+                <th>สาขา</th>
+                <th>ชั้นปี</th>
+            </tr>
+        </thead>
+        
+    </table>
+    
+</body>
+</html>
